@@ -1,0 +1,61 @@
+total number of products = count(product id) 
+
+total of emplwyee = sum(emplwyee)
+
+
+
+Cost of goods sold = summ(total product cost)
+
+
+
+Total sales or total sels revenue  = Total Sales = SUM([SalesAmount])   =    Total Revenue = sum(orderQuantity  × unitprice)
+
+
+
+Gross Profit: Gross Profit = Total Revenue - Cost of goods sold 
+
+>>>>>>>>>>>>>>>>>>> Sales growth year (YoY Sales Growth (%) = ((Current Year Sales - Previous Year Sales) / Previous Year Sales) * 100
+
+YoY Sales Growth (%) = 
+VAR CurrentYear = Sales[Year]
+VAR PreviousYear = CurrentYear - 1
+VAR CurrentYearSales = Sales[SalesAmount]
+VAR PreviousYearSales = CALCULATE(SUM(Sales[SalesAmount]), Sales[Year] = PreviousYear)
+RETURN
+    IF(ISBLANK(PreviousYearSales), BLANK(), ((CurrentYearSales - PreviousYearSales) / PreviousYearSales) * 100)
+
+
+
+Repeat Sales= Repeat Sales (%) = (Repeat Customer Sales / Total Sales) * 100
+
+
+Average price discount per product
+Average Price Discount per Product (%) = ((Total Regular Price - Total Discounted Price) / Total Regular Price) * 100 / Total Number of Products
+
+
+
+Average price discount per sales person
+Average Price Discount per Salesperson (%) = ((Total Regular Price - Total Discounted Price) / Total Regular Price) * 100 / Total Number of Salespeople
+
+
+
+
+Average revenue per product
+Average Revenue per Product = Total Sales Revenue / Total Number of Products
+
+
+Gross margin per product
+Gross Margin per Product (%) = ((Total Revenue - Total Cost) / Total Revenue) * 100 / Total Number of Products
+
+
+
+
+Gross margin per sales person
+Gross Margin per Salesperson (%) = ((Total Revenue by Salesperson - Total Cost by Salesperson) / Total Revenue by Salesperson) * 100 / Total Number of Salespeople
+
+
+
+New sales person ramp-up time
+
+Number of units sold per day/week/month/quarter/year
+
